@@ -1,0 +1,17 @@
+Docker
+
+Dockerfile
+FROM ubuntu:latest
+RUN apt-get update && apt-get install -y python3
+CMD ["python3", "--version"]
+
+docker build -t name-of-the-image . #image name
+
+docker run --detach --publish 80:80 --name webserver nginx
+
+docker container ls
+docker container ls -a
+docker images ls
+docker info
+docker inspect 1381936saa86 #id of the container
+docker stop webserver #container name
